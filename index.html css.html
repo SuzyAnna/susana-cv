@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The title (my name)-->
+    <meta charset="UTF-8">
+    <title>Susana Munoz - Digital CV</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!--Introduction of self-->
+    <!-- Note: Add your profile.png image to this folder or use a placeholder -->
+    <img src="susana.jpg" alt="Susana Munoz Profile Picture" width="200" height="200">
+    <h1>Susana Munoz</h1>
+    <p>Demonstrates enthusiasm for embracing new technologies and a commitment to continuous learning. Collaborates effectively with team members to achieve project goals. Excellent communication skills, Problem-solving and customer service.</p>
+    
+    <p><a href="Susana_Munoz_CV.pdf" download style="display: inline-block; background-color: #0071ce; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Download PDF Version</a></p>
+    
+    <h2>Contact Information</h2>
+    <ul>
+        <!--how to contact you-->
+        <li>Email: susanam311@gmail.com</li>
+        <li>Phone: +1 (520) 227 9456</li>
+        <li>Location: Douglas, Arizona</li>
+        <li>GitHub: <a href="https://github.com/SuzyAnna">SuzyAnna</a></li>
+    </ul>
+    
+    <div>
+        <!--Professional Summary-->
+        <h2>Professional Summary</h2>
+        <p>Dedicated and focused on creating customized software applications. It will give me the opportunity to implement the skills I have acquired. I am highly skilled in organization and working with teams.</p>
+    </div>
+    
+    <div>
+        <h2>Education</h2>
+        <ul>
+            <li>High school Diploma, Douglas Highschool, 2001</li>
+            <li>Associate of Applied Science AAS, Cochise College, 2018</li>
+            <li>Certificate in Full Enterprise Software Development, Springboard, 2025</li>
+        </ul>
+        
+        <div class="achievements">
+            <table>
+                <caption>Achievements</caption>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Organization</th>
+                        <th>Achievement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024</td>
+                        <td>Wal-mart</td>
+                        <td>Employee of the Month</td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>Cochise College</td>
+                        <td>Founder and President Social Concerns Club</td>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td>Wal-mart</td>
+                        <td>American Cancer Society Relay for Life Team Captain</td>
+                    </tr>
+                    <tr>
+                        <td>2006</td>
+                        <td>Wal-mart</td>
+                        <td>Employee of the Month</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!--Skills Section-->
+    <div class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: JavaScript, HTML, CSS</li>
+            <li>Version Control: Git, GitHub</li>
+            <li>Soft Skills: Communication, Teamwork, Problem-solving</li>
+            <li>Bilingualism: English, Spanish</li>
+        </ul>
+    </div>
+    
+    <!--Work experience-->
+    <div class="experience">
+        <h2>Experience</h2>
+        <h3>AP Operations Team Associate</h3>
+        <ul>
+            <li>November 2023 - Present</li>
+            <li>Assisted in the management of inventory and loss prevention.</li>
+            <li>Collaborated with team members to ensure efficient operations.</li>
+            <li>Maintained a high level of accuracy in inventory records.</li>
+        </ul>
+        
+        <h3>Apparel Team Lead - Walmart</h3>
+        <ul>
+            <li>November 2020 - November 2023</li>
+            <li>Led a team in the apparel department, ensuring product availability and customer satisfaction.</li>
+            <li>Trained and mentored team members on best practices and customer service.</li>
+            <li>Managed inventory levels and assisted in merchandising strategies.</li>
+        </ul>
+        
+        <h3>People Lead - Walmart</h3>
+        <ul>
+            <li>July 2019 - November 2020</li>
+            <li>Managed a team of associates, ensuring efficient operations and high customer satisfaction.</li>
+            <li>Trained new employees on company policies and procedures.</li>
+            <li>Handled customer inquiries and resolved issues promptly.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <!--contact info-->
+        <section>
+            <h2>Contact Me</h2>
+            <!--contact form-->
+            <form action="#" method="post">
+                <!--Name field-->
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                
+                <!--email-->
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                
+                <!--phone number-->  
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                </div>
+                
+                <!--Reason for contact dropdown-->
+                <div>
+                    <label for="reason">Reason for Contact:</label>  
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Select a reason for contact</option>
+                        <option value="job offer">Job Offer</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <!--preferred times of contact checkbox--> 
+                <fieldset>
+                    <legend>Preferred Time of Contact:</legend>
+                    <div>
+                        <input type="checkbox" id="contact-morning" name="contact-time" value="morning">
+                        <label for="contact-morning">Morning</label>    
+                    </div>
+                    <div>
+                        <input type="checkbox" id="contact-afternoon" name="contact-time" value="afternoon">
+                        <label for="contact-afternoon">Afternoon</label>        
+                    </div>
+                    <div>
+                        <input type="checkbox" id="contact-evening" name="contact-time" value="evening">
+                        <label for="contact-evening">Evening</label>    
+                    </div>
+                </fieldset>        
+                
+                <!--Message field-->        
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="7" required placeholder="Please provide details for reason of contact."></textarea>
+                </div>
+                
+                <!--Submit button-->
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The title (my name)-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susana Munoz - Digital CV</title>
+    <style>
+        /* Digital CV Styles for Susana Munoz */
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0071ce 0%, #004c87 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Main container */
+        .cv-container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header section with profile */
+        .header-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            gap: 30px;
+        }
+
+        /* Header left - profile image */
+        .header-left {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Header center - name and intro */
+        .header-center {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header right - contact info */
+        .header-right {
+            flex: 0 0 auto;
+            min-width: 250px;
+        }
+
+        /* Header contact info compact styling */
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .header-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: rgba(0, 113, 206, 0.1);
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: #004c87;
+            transition: background-color 0.2s ease;
+        }
+
+        .header-contact-item:hover {
+            background: rgba(0, 113, 206, 0.2);
+        }
+
+        .header-contact-item span:first-child {
+            font-size: 1.1em;
+        }
+
+        /* Main content area */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        /* Left column */
+        .left-column {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Right column */
+        .right-column {
+            flex: 2;
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Contact info flex layout */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #0071ce;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        /* Skills flex layout */
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #ffc220;
+            box-shadow: 0 2px 5px rgba(255, 194, 32, 0.2);
+        }
+
+        /* Experience flex layout */
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .job-item {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 113, 206, 0.2);
+        }
+
+        /* Education flex layout */
+        .education-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Card styling for sections */
+        .card {
+            padding: 25px;
+            background: linear-gradient(45deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Profile section */
+        img[src="suzy.jpg"] {
+            border-radius: 50%;
+            border: 5px solid #0071ce;
+            box-shadow: 0 8px 20px rgba(0, 113, 206, 0.3);
+            display: block;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease;
+        }
+
+        img[src="suzy.jpg"]:hover {
+            transform: scale(1.05);
+        }
+
+        /* Typography */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0071ce;
+            border-bottom: 3px solid #0071ce;
+            padding-bottom: 10px;
+            margin: 25px 0 15px 0;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #004c87;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #555;
+        }
+
+        /* Contact information styling */
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Lists */
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        /* Sections with divs - updated for flexbox */
+        .section {
+            margin-bottom: 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #f8f9fa, #ffffff);
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Links */
+        a {
+            color: #0071ce;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #004c87;
+            text-decoration: underline;
+        }
+
+        /* Sections with divs */
+        div {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(45deg, #f8f9fa, #ffffff);
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Sections with divs - updated for flexbox */
+        .section {
+            margin-bottom: 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #f8f9fa, #ffffff);
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Skills section */
+        .skills {
+            background: linear-gradient(45deg, #fff3cd, #fefefe);
+            border-left: 5px solid #ffc220;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .skills li {
+            background: white;
+            margin: 0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc220;
+            box-shadow: 0 2px 5px rgba(255, 194, 32, 0.2);
+        }
+
+        /* Experience section */
+        .experience {
+            background: linear-gradient(45deg, #e3f2fd, #fefefe);
+            border-left: 5px solid #0071ce;
+        }
+
+        .experience h3 {
+            color: #004c87;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 113, 206, 0.2);
+        }
+
+        /* Achievements table */
+        .achievements {
+            background: linear-gradient(45deg, #fff9c4, #ffffff);
+            border-left: 5px solid #ffc220;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #0071ce;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: linear-gradient(45deg, #0071ce, #004c87);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.2s ease;
+        }
+
+        tr:hover td {
+            background-color: #f8f9fa;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8f9fa;
+        }
+
+        /* Footer and contact form */
+        footer {
+            background: linear-gradient(135deg, #004c87, #002a5c);
+            color: white;
+            border-radius: 15px;
+            margin-top: 30px;
+            padding: 40px;
+        }
+
+        footer h2 {
+            color: white;
+            border-bottom: 3px solid #ffc220;
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+        }
+
+        /* Form styling */
+        form {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row-three {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ecf0f1;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 194, 32, 0.3);
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #ffc220;
+            box-shadow: 0 0 20px rgba(255, 194, 32, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced fieldset for checkboxes */
+        fieldset {
+            border: 2px solid rgba(255, 194, 32, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 0;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        legend {
+            color: #ffc220;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 0 15px;
+            background: #004c87;
+            border-radius: 6px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .checkbox-item:hover {
+            background: rgba(255, 194, 32, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            margin-right: 12px;
+            transform: scale(1.3);
+            accent-color: #ffc220;
+        }
+
+        .checkbox-item label {
+            margin-bottom: 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Enhanced submit button */
+        .submit-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ffc220, #e6ac00);
+            color: #004c87;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            box-shadow: 0 4px 15px rgba(255, 194, 32, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #e6ac00, #cc9900);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 194, 32, 0.5);
+        }
+
+        button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Footer contact intro */
+        .footer-intro {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            color: #ecf0f1;
+            line-height: 1.6;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .cv-container {
+                margin: 0;
+            }
+            
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .header-left,
+            .header-right {
+                flex: none;
+                width: 100%;
+            }
+            
+            .header-right {
+                min-width: unset;
+            }
+            
+            /* Footer responsive */
+            footer {
+                padding: 25px;
+            }
+            
+            .form-row,
+            .form-row-three {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .checkbox-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            button {
+                width: 100%;
+                min-width: unset;
+            }
+            
+            .main-content {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+            
+            .left-column,
+            .right-column {
+                min-width: unset;
+                flex: none;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            img[src="suzy.jpg"] {
+                width: 150px;
+                height: 150px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        /* Animation for page load */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cv-container {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Hover effects for sections */
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <!-- Left: Profile Image -->
+            <div class="header-left">
+                <img src="susana.jpg" alt="Susana Munoz Profile Picture" width="200" height="200">
+            </div>
+
+            <!-- Center: Name and Introduction -->
+            <div class="header-center">
+                <h1>Susana Munoz</h1>
+                <p>Demonstrates enthusiasm for embracing new technologies and a commitment to continuous learning. Collaborates effectively with team members to achieve project goals. Excellent communication skills, Problem-solving and customer service.</p>
+            </div>
+
+            <!-- Right: Contact Information -->
+            <div class="header-right">
+                <div class="header-contact">
+                    <div class="header-contact-item">
+                        <span>📧</span>
+                        <span>susanam311@gmail.com</span>
+                    </div>
+                    <div class="header-contact-item">
+                        <span>📱</span>
+                        <span>+1 (520) 227 9456</span>
+                    </div>
+                    <div class="header-contact-item">
+                        <span>📍</span>
+                        <span>Douglas, Arizona</span>
+                    </div>
+                    <div class="header-contact-item">
+                        <span>💻</span>
+                        <span><a href="https://github.com/SuzyAnna">SuzyAnna</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Skills Section -->
+                <div class="card skills">
+                    <h2>Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span>💻 Programming Languages: JavaScript, HTML, CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>🔧 Version Control: Git, GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>🤝 Soft Skills: Communication, Teamwork, Problem-solving</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>🌐 Bilingualism: English, Spanish</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Professional Summary -->
+                <div class="card">
+                    <h2>Professional Summary</h2>
+                    <p>Dedicated and focused on creating customized software applications. It will give me the opportunity to implement the skills I have acquired. I am highly skilled in organization and working with teams.</p>
+                </div>
+
+                <!-- Education -->
+                <div class="card">
+                    <h2>Education</h2>
+                    <div class="education-content">
+                        <ul>
+                            <li>High school Diploma, Douglas Highschool, 2001</li>
+                            <li>Associate of Applied Science AAS, Cochise College, 2018</li>
+                            <li>Certificate in Full Enterprise Software Development, Springboard, 2025</li>
+                        </ul>
+                        
+                        <div class="achievements">
+                            <table>
+                                <caption>Achievements</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Organization</th>
+                                        <th>Achievement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2024</td>
+                                        <td>Wal-mart</td>
+                                        <td>Employee of the Month</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018</td>
+                                        <td>Cochise College</td>
+                                        <td>Founder and President Social Concerns Club</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2010</td>
+                                        <td>Wal-mart</td>
+                                        <td>American Cancer Society Relay for Life Team Captain</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2006</td>
+                                        <td>Wal-mart</td>
+                                        <td>Employee of the Month</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="card experience">
+                    <h2>Experience</h2>
+                    <div class="experience-grid">
+                        <div class="job-item">
+                            <h3>AP Operations Team Associate</h3>
+                            <ul>
+                                <li>November 2023 - Present</li>
+                                <li>Assisted in the management of inventory and loss prevention.</li>
+                                <li>Collaborated with team members to ensure efficient operations.</li>
+                                <li>Maintained a high level of accuracy in inventory records.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="job-item">
+                            <h3>Apparel Team Lead - Walmart</h3>
+                            <ul>
+                                <li>November 2020 - November 2023</li>
+                                <li>Led a team in the apparel department, ensuring product availability and customer satisfaction.</li>
+                                <li>Trained and mentored team members on best practices and customer service.</li>
+                                <li>Managed inventory levels and assisted in merchandising strategies.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="job-item">
+                            <h3>People Lead - Walmart</h3>
+                            <ul>
+                                <li>July 2019 - November 2020</li>
+                                <li>Managed a team of associates, ensuring efficient operations and high customer satisfaction.</li>
+                                <li>Trained new employees on company policies and procedures.</li>
+                                <li>Handled customer inquiries and resolved issues promptly.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <section>
+            <h2>Let's Connect!</h2>
+            <div class="footer-intro">
+                <p>I'd love to hear from you! Whether you have a job opportunity, feedback, or just want to connect, please don't hesitate to reach out.</p>
+            </div>
+            
+            <form action="#" method="post">
+                <div class="form-row-three">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reason">Reason for Contact *</label>
+                        <select id="reason" name="reason" required>
+                            <option value="" disabled selected>Select a reason</option>
+                            <option value="job offer">💼 Job Opportunity</option>
+                            <option value="collaboration">🤝 Collaboration</option>
+                            <option value="feedback">💭 Feedback</option>
+                            <option value="general">💬 General Inquiry</option>
+                            <option value="other">📋 Other</option>
+                        </select>
+                    </div>
+                    <fieldset class="form-group">
+                        <legend>Preferred Contact Time</legend>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="contact-morning" name="contact-time" value="morning">
+                                <label for="contact-morning">🌅 Morning</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="contact-afternoon" name="contact-time" value="afternoon">
+                                <label for="contact-afternoon">☀️ Afternoon</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="contact-evening" name="contact-time" value="evening">
+                                <label for="contact-evening">🌙 Evening</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Please share your message, questions, or details about why you're reaching out..."></textarea>
+                </div>
+                
+                <div class="submit-container">
+                    <button type="submit">✉️ Send Message</button>
+                </div>
+            </form>
+        </section>
+    </footer>
+</body>
+</html>
