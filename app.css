@@ -1,0 +1,257 @@
+/* Digital CV Styles for Susana Munoz */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #0071ce 0%, #004c87 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Profile Image */
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 4px solid #0071ce;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 8px #ffc220;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #0071ce;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #0071ce;
+    border-bottom: 3px solid #0071ce;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #ffc220 0%, transparent 100%);
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Links */
+a {
+    color: #0071ce;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffc220;
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    list-style-position: inside;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Sections/Divs */
+div {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Information */
+h2 + ul {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.achievements table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.achievements caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #0071ce;
+}
+
+.achievements th,
+.achievements td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.achievements th {
+    background-color: #0071ce;
+    color: white;
+    font-weight: bold;
+}
+
+.achievements tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.achievements tbody tr:hover {
+    background-color: #fff9e6;
+}
+
+/* Form Styles */
+footer {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0071ce;
+    box-shadow: 0 0 5px rgba(0, 113, 206, 0.3);
+}
+
+/* Fieldset for Checkboxes */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 5px;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 0;
+    box-shadow: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    width: auto;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #0071ce;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 3px #ffc220;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffc220;
+    color: #0071ce;
+    box-shadow: 0 0 0 3px #0071ce;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    div, footer {
+        padding: 15px;
+    }
+}
