@@ -236,22 +236,304 @@ button[type="submit"]:active {
     transform: scale(0.98);
 }
 
+/* CV Container */
+.cv-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Header Section Layout */
+.header-section {
+    display: grid;
+    grid-template-columns: 200px 1fr 300px;
+    gap: 30px;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left img {
+    margin: 0;
+}
+
+.header-center h1 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.header-center p {
+    text-align: left;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.header-right {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.header-contact {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.header-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.header-contact-item span:first-child {
+    font-size: 1.2em;
+    min-width: 25px;
+}
+
+.header-contact-item span:last-child {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.left-column, .right-column {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-item {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid #0071ce;
+    box-shadow: none;
+}
+
+.skill-item span {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Experience Grid */
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.job-item h3 {
+    margin-top: 0;
+    color: #0071ce;
+}
+
+/* Education Content */
+.education-content {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* Form Layout */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.form-row-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.footer-intro {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.footer-intro p {
+    text-align: left;
+}
+
 /* Responsive Design */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .header-section {
+        grid-template-columns: 150px 1fr 250px;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .header-left img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .main-content {
+        grid-template-columns: 300px 1fr;
+        gap: 15px;
+    }
+}
+
+/* Small Tablets and Large Phones (600px - 768px) */
+@media (max-width: 768px) {
+    .header-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .header-left img {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .header-center h1 {
+        text-align: center;
+    }
+    
+    .header-center p {
+        text-align: center;
+    }
+    
+    .header-right {
+        margin: 0 auto;
+    }
+    
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-row-three {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* Mobile Phones (up to 600px) */
 @media (max-width: 600px) {
     body {
         padding: 10px;
     }
     
-    h1 {
-        font-size: 2em;
+    .header-section {
+        padding: 15px;
+        gap: 15px;
     }
     
-    img {
-        width: 150px;
-        height: 150px;
+    .header-left img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+    
+    .card {
+        padding: 15px;
     }
     
     div, footer {
         padding: 15px;
+    }
+    
+    .header-contact-item span:first-child {
+        font-size: 1em;
+    }
+    
+    .header-contact-item span:last-child {
+        font-size: 0.85em;
+    }
+    
+    /* Make table scrollable on small screens */
+    .achievements {
+        overflow-x: auto;
+    }
+    
+    .achievements table {
+        min-width: 500px;
+    }
+    
+    /* Stack form elements vertically */
+    .form-row-three {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Extra Small Phones (up to 400px) */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.1em;
+    }
+    
+    .header-left img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .card {
+        padding: 12px;
     }
 }
